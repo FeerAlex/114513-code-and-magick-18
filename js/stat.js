@@ -7,6 +7,7 @@ var CLOUD_Y = 10;
 var STATISTIC_HEIGHT = 150;
 var GAP = 10;
 var BAR_WIDTH = 40;
+var BAR_GAP = 50;
 var maxTime = 0;
 
 var getMaxElement = function (arr) {
@@ -42,7 +43,7 @@ var getColor = function () {
 
 var renderBar = function (ctx, name, time, index) {
   var barHeight = (STATISTIC_HEIGHT * time) / maxTime - GAP;
-  var barCoordX = CLOUD_X + BAR_WIDTH + (GAP + BAR_WIDTH) * 2 * index;
+  var barCoordX = CLOUD_X + BAR_WIDTH + BAR_GAP * 2 * index;
   var barCoordY = CLOUD_Y + GAP * 8 + (STATISTIC_HEIGHT - barHeight);
 
   ctx.fillStyle = '#000';

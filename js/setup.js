@@ -11,9 +11,9 @@ var template = document.querySelector('#similar-wizard-template').content.queryS
 var wizards = [];
 
 // функция генерации случайных индексов,
-var getRandomIndex = function(max) {
+var getRandomIndex = function (max) {
   return Math.floor(Math.random() * max);
-}
+};
 
 // функция создания DOM-элемента на основе JS-объекта,
 var createWizard = function (wizard) {
@@ -27,7 +27,7 @@ var createWizard = function (wizard) {
   wizardEyes.style.fill = wizard.eyesColor;
 
   return element;
-}
+};
 
 // функция генерации случайных данных
 var createWizardsArray = function () {
@@ -38,7 +38,7 @@ var createWizardsArray = function () {
       eyesColor: EYES_COLORS[getRandomIndex(EYES_COLORS.length)]
     });
   }
-}
+};
 
 // функция заполнения блока DOM-элементами на основе массива JS-объектов.
 var insertWizards = function () {
@@ -51,7 +51,7 @@ var insertWizards = function () {
 
   container.appendChild(fragment);
   setupSimilar.classList.remove('hidden');
-}
+};
 
 setup.classList.remove('hidden');
 

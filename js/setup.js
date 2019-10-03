@@ -50,7 +50,6 @@ var insertWizards = function () {
   }
 
   container.appendChild(fragment);
-  setupSimilar.classList.remove('hidden');
 };
 
 setup.classList.remove('hidden');

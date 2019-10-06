@@ -20,8 +20,8 @@ var getRandomElement = function () {
     name: NAMES[getRandomIndex(NAMES.length)] + ' ' + SURNAMES[getRandomIndex(SURNAMES.length)],
     coatColor: COAT_COLORS[getRandomIndex(COAT_COLORS.length)],
     eyesColor: EYES_COLORS[getRandomIndex(EYES_COLORS.length)]
-  }
-}
+  };
+};
 
 // функция создания DOM-элемента на основе JS-объекта,
 var createWizard = function (wizard) {

@@ -90,12 +90,8 @@ var getRandomIndex = function (max) {
   return Math.floor(Math.random() * max);
 };
 
-var getRandomElement = function () {
-  return {
-    name: NAMES[getRandomIndex(NAMES.length)] + ' ' + SURNAMES[getRandomIndex(SURNAMES.length)],
-    coatColor: COAT_COLORS[getRandomIndex(COAT_COLORS.length)],
-    eyesColor: EYES_COLORS[getRandomIndex(EYES_COLORS.length)]
-  };
+var getRandomElement = function (array) {
+  return array[getRandomIndex(array.length)];
 };
 
 var createWizard = function (wizard) {
@@ -113,7 +109,11 @@ var createWizard = function (wizard) {
 
 var createWizardsArray = function () {
   for (var i = 0; i < 4; i++) {
-    wizards.push(getRandomElement());
+    wizards.push({
+      name: getRandomElement(NAMES) + ' ' + getRandomElement(SURNAMES),
+      coatColor: getRandomElement(COAT_COLORS),
+      eyesColor: getRandomElement(EYES_COLORS)
+    });
   }
 };
 

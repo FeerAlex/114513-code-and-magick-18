@@ -24,21 +24,21 @@ var template = document.querySelector('#similar-wizard-template').content.queryS
 var wizards = [];
 
 wizardCoatColor.addEventListener('click', function (evt) {
-  var color = COAT_COLORS[getRandomIndex(COAT_COLORS.length)];
+  var color = getRandomElement(COAT_COLORS);
 
   evt.target.style.fill = color;
   wizardCoatColorInput.value = color;
 });
 
 wizardEyesColor.addEventListener('click', function (evt) {
-  var color = EYES_COLORS[getRandomIndex(EYES_COLORS.length)];
+  var color = getRandomElement(EYES_COLORS);
 
   evt.target.style.fill = color;
   wizardEyesColorInput.value = color;
 });
 
 wizardFireballsColor.addEventListener('click', function (evt) {
-  var color = FIREBALL_COLORS[getRandomIndex(FIREBALL_COLORS.length)];
+  var color = getRandomElement(FIREBALL_COLORS);
 
   evt.target.style.backgroundColor = color;
   wizardFireballsColorInput.value = color;
